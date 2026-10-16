@@ -1,4 +1,5 @@
 package com.rk.activities.main.ui
+import androidx.compose.foundation.layout.height
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -330,7 +331,7 @@ private fun TabItemContent(
     val backgroundColor = MaterialTheme.colorScheme.surfaceVariant
 
     val tabModifier =
-        Modifier.let { modifier ->
+        Modifier.height(30.dp).let { modifier ->
                 calculatedTabWidth?.let { width -> modifier.width(with(density) { width.toDp() }) } ?: modifier
             }
             .let { if (isDraggableContent) it.background(backgroundColor.copy(alpha = 0.4f)) else it }

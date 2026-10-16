@@ -1,4 +1,5 @@
 package com.rk.activities.main.ui
+import androidx.compose.ui.unit.dp
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandVertically
@@ -42,6 +43,7 @@ fun XedTopBar(
 
     AnimatedVisibility(visible = showTopBar, enter = expandVertically(), exit = shrinkVertically()) {
         TopAppBar(
+            expandedHeight = 40.dp,
             windowInsets = if (fullScreen) WindowInsets() else TopAppBarDefaults.windowInsets,
             modifier =
                 Modifier.pointerInput(Unit) {
